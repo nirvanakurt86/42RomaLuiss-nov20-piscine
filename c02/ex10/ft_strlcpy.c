@@ -1,16 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+<<<<<<< Updated upstream
+/*   By: rgilles <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/02/09 18:31:44 by rgilles           #+#    #+#             */
+/*   Updated: 2020/02/09 18:31:47 by rgilles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int dsize)
+{
+	char			*osrc;
+	unsigned int	nleft;
+
+	osrc = src;
+	nleft = dsize;
+	if (nleft != 0)
+	{
+		while (--nleft != 0)
+		{
+			if ((*dest++ = *src++) == '\0')
+				break ;
+		}
+	}
+	if (nleft == 0)
+	{
+		if (dsize != 0)
+			*dest = '\0';
+		while (*src++)
+			;
+	}
+	return (src - osrc - 1);
+}
+=======
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/03 16:44:28 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/03 16:55:27 by vstile           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 **                                `-osyyyyso-`
@@ -35,3 +66,4 @@
 **             \    / .----)   |      |  |    |  | |  `----.|  |____
 **              \__/  |_______/       |__|    |__| |_______||_______|
 */
+>>>>>>> Stashed changes

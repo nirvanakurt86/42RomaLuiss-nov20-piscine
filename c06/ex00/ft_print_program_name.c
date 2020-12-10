@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/09 20:03:05 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/09 20:28:48 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+#include <unistd.h>
+
+int		main(int argc, char **argv)
+{
+	char	c;
+
+	if (!argc)
+		return (0);
+	while (*argv[0])
+	{
+		c = *argv[0];
+		write(1, argv[0], 1);
+		argv[0]++;
+	}
+}
 
 /*
 **                                `-osyyyyso-`

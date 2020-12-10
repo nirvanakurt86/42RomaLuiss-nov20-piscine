@@ -1,16 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/07 14:13:09 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/07 16:11:26 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+char	*ft_strstr(char *str, char *to_find)
+{
+	int i;
+	int j;
+
+	i = 0;
+	if (*to_find == 0)
+		return (str);
+	while (str[i])
+	{
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			j++;
+			if (to_find[j] == 0)
+				return (&str[i]);
+		}
+		i++;
+	}
+	return (0);
+}
 
 /*
 **                                `-osyyyyso-`

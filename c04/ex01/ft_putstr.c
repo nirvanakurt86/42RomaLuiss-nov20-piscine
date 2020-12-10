@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/08 18:08:02 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/08 18:53:00 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+#include <unistd.h>
+
+void	ft_putstr(char *str)
+{
+	int		i;
+	char	c;
+
+	i = 0;
+	while (str[i])
+	{
+		c = str[i];
+		write(1, &c, 1);
+		i++;
+	}
+}
 
 /*
 **                                `-osyyyyso-`

@@ -1,16 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/08 18:09:09 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/09 15:56:25 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+#include <stdio.h>
+
+int		ft_atoi(char *str)
+{
+	int		sign;
+	long	number_sx;
+
+	number_sx = 0;
+	sign = 1;
+	while (*str)
+	{
+		while (*str == ' ' || (*str >= 9 && *str <= 13))
+			str++;
+		while (*str == '-' || *str == '+')
+		{
+			if (*str == '-')
+				sign = sign * -1;
+			str++;
+		}
+		while (*str >= '0' && *str <= '9')
+		{
+			number_sx = number_sx * 10 + *str - '0';
+			str++;
+		}
+		return (sign * (int)number_sx);
+	}
+	return (sign * (int)number_sx);
+}
 
 /*
 **                                `-osyyyyso-`

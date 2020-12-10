@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/09 19:44:37 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/09 19:46:29 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+void	ft_rev_int_tab(int *tab, int size)
+{
+	int i;
+	int temp;
+
+	i = 0;
+	while (i < size)
+	{
+		temp = tab[i];
+		tab[i] = tab[size - 1];
+		tab[size - 1] = temp;
+		i++;
+		size--;
+	}
+}
 
 /*
 **                                `-osyyyyso-`

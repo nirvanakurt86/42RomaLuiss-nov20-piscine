@@ -1,16 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/07 14:11:56 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/07 15:59:20 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+char	*ft_strcat(char *dest, char *src)
+{
+	int i;
+	int t;
+
+	i = 0;
+	while (dest[i])
+	{
+		i++;
+	}
+	t = 0;
+	while (src[t])
+	{
+		dest[i] = src[t];
+		i++;
+		t++;
+	}
+	dest[i] = 0;
+	return (dest);
+}
 
 /*
 **                                `-osyyyyso-`

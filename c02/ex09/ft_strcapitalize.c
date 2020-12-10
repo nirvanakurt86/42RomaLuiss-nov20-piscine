@@ -1,16 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+<<<<<<< Updated upstream
+/*   By: rgilles <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/02/09 14:21:05 by rgilles           #+#    #+#             */
+/*   Updated: 2020/02/09 14:55:55 by rgilles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+int		an(char c)
+{
+	if (c < '0')
+		return (0);
+	else if (c > '9' && c < 'A')
+		return (0);
+	else if ((c > 'Z' && c < 'a') || (c > 'z'))
+		return (0);
+	return (1);
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	char *charptr;
+
+	charptr = str;
+	while (*charptr)
+	{
+		if (charptr == str)
+		{
+			if (*charptr <= 'z' && *charptr >= 'a')
+				*charptr -= 32;
+		}
+		else if (an(*(charptr - 1)) == 0)
+		{
+			if (*charptr <= 'z' && *charptr >= 'a')
+				*charptr -= 32;
+		}
+		else if ((*charptr >= 'A') && (*charptr <= 'Z'))
+		{
+			*charptr += 32;
+		}
+		charptr++;
+	}
+	return (str);
+}
+=======
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/03 16:43:15 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/03 17:26:22 by vstile           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 **                                `-osyyyyso-`
@@ -35,3 +78,4 @@
 **             \    / .----)   |      |  |    |  | |  `----.|  |____
 **              \__/  |_______/       |__|    |__| |_______||_______|
 */
+>>>>>>> Stashed changes

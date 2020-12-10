@@ -1,16 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/08 18:08:41 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/09 15:40:33 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	unsigned int nb_uns;
+
+	if (nb < 0)
+	{
+		nb_uns = (unsigned int)(-1 * nb);
+		ft_putchar('-');
+	}
+	else
+		nb_uns = (unsigned int)nb;
+	if (nb_uns >= 10)
+	{
+		ft_putnbr(nb_uns / 10);
+		ft_putnbr(nb_uns % 10);
+	}
+	else
+		ft_putchar(nb_uns + '0');
+}
 
 /*
 **                                `-osyyyyso-`

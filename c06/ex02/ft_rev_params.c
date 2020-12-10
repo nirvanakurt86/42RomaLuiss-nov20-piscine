@@ -1,16 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42 Roma Luiss Nov~Dec '20 Piscine                  :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vstile <vstile@student.42.it>              +#+  +:+       +#+        */
+/*   By: vstile <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 20:08:52 by vstile            #+#    #+#             */
-/*   Updated: 2020/12/09 20:09:16 by vstile           ###   ########.fr       */
+/*   Created: 2020/12/09 20:04:40 by vstile            #+#    #+#             */
+/*   Updated: 2020/12/10 11:51:41 by vstile           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*                          May the Force Be with You                         */
+#include <unistd.h>
+
+void	ft_putstr(char *str)
+{
+	char *my_str;
+
+	my_str = str;
+	while (*my_str != 0)
+	{
+		write(1, my_str, 1);
+		my_str++;
+	}
+	write(1, "\n", 1);
+}
+
+int		main(int argc, char *argv[])
+{
+	int i;
+
+	i = argc - 1;
+	while (i > 0)
+	{
+		ft_putstr(argv[i]);
+		i--;
+	}
+	return (0);
+}
 
 /*
 **                                `-osyyyyso-`
